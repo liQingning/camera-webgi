@@ -34,9 +34,9 @@ body {
   scroll-behavior: smooth;
 }
 
-html, body {
-  /*scroll-snap-type: y mandatory;*/
-}
+/* html, body {
+  scroll-snap-type: y mandatory;
+} */
 
 ol, ul {
 	list-style: none;
