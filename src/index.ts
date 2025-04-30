@@ -55,9 +55,9 @@ async function setupViewer(){
     await addBasePlugins(viewer)
     await viewer.addPlugin(FileTransferPlugin)
     await viewer.addPlugin(CanvasSnipperPlugin)
-    await viewer.addPlugin(TonemapPlugin);
-    await viewer.addPlugin(GroundPlugin);
-    await viewer.addPlugin(GBufferPlugin);
+    // await viewer.addPlugin(TonemapPlugin);
+    // await viewer.addPlugin(GroundPlugin);
+    // await viewer.addPlugin(GBufferPlugin);
     
 
     // WEBGi loader
@@ -452,6 +452,7 @@ async function setupViewer(){
                 viewer.scene.children.forEach((obj: any) => {
                     obj.rotation.z = lerp(Math.PI/2,0,p);  // 将 z 轴的旋转角度减 90°（Math.PI / 2）
                 });
+                
                 position.set(
                     lerp(-0.36,0.0, p),
                     lerp(-1.227,-2.39 ,p),
@@ -494,6 +495,40 @@ async function setupViewer(){
             }
         })
 
+        //第八部分到第九部分
+        ScrollTrigger.create({
+            trigger: ".cam-view-9",
+            start: "top bottom",
+            end: "top top",
+            onUpdate: self => {
+                const p = self.progress;
+                console.log(p);
+                position.set(
+                    lerp(0.0,2.82, p),
+                    lerp(-2.39,-0.8,p),
+                    lerp(-1.8,-0.66,p)
+                )
+                target.set(
+                    lerp(0.0,-0.1, p),
+                    lerp(0.677,-0.83,p),
+                    lerp(-0.38,-0.57,p)
+                )
+                const textE1 = document.querySelector('.view8') as HTMLElement
+                if (textE1) {
+                    textE1.style.opacity = `${lerp(1,0,p)}`
+                }
+                const textE2 = document.querySelector('.view8--container1') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(1,0,p)}`
+                    textE2.style.transform=`translateY(${-p*400+p*window.innerHeight}px)`
+                }
+                const textE3 = document.querySelector('.view8--content2') as HTMLElement
+                if (textE3) {
+                    textE3.style.opacity = `0`
+                }
+                onUpdate()
+            }
+        })
 
         if(!isMobile){
             const sections = document.querySelectorAll('.section')
@@ -573,6 +608,7 @@ async function setupViewer(){
                     customScrollY = Math.max(customScrollY + scrollVelocity * velocityDamping, 0)
                     element.scrollTop = customScrollY
                     scrollVelocity *= (1.-velocityDamping)
+                    ScrollTrigger.update();
                 } else {
                     scrollVelocity = 0
                 }
