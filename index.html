@@ -1,18 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
-	<title>WebGi starter</title>
+	<title>vivo-webgi</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" href="/assets/images/iconlogo.png" type="image/png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
 </head>
 
 <body>
+	<!-- 加载页面 -->
+	<div class="loader">
+		<img src="assets/images/logo蓝.png" width="100px">
+		<p>Loading... Please wait</p>
+		<div class="progress"></div>
+	</div>
+
+
+
+	<div id="smooth-wrapper">
+		<div id="smooth-content">
+
+			<section class="header">
+				<div class="header--container">
+					<a href="https://www.vivo.com.cn/brand/home" target="_blank"><img class="header--brand" src="assets/images/logo蓝.png"></a>
+					<ul class="header--menu">
+						<a href="https://www.vivo.com.cn/vivo/3D/x200ultra" target="_blank"><li>360°展示</li></a>
+						<a href="https://www.vivo.com.cn/vivo/param/x200ultra" target="_blank"><li>参数规格</li></a>
+						<a href="https://shop.vivo.com.cn/product/10010781" target="_blank"><li>购 买</li></a>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section cam-view-1" data-label="section1">
+				
+				<div class="hero--container">
+					<div class="hero--content">
+						<h2>大场面</h2>
+						<h1>V</h1>
+						<p>单掌控</p>
+						<button tabindex="-1" class="button button-know-more">了解 更多</button>
+					</div>
+				</div>
+		
+		
+				<div class="hero--scroller--container">
+					<div class="hero--scroller">
+						<p class="hero--scroller--text">向下滑动继续探索</p>
+						<svg class="bounce" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 33a15 15 0 1 0 0-30 15 15 0 0 0 0 30Z" stroke="#929292" stroke-linecap="round" stroke-linejoin="round"/><path d="m12 18 6 6 6-6M18 12v12" stroke="#929292" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+				</div>
+		
+				<div class="video--container">
+					<div class="video--content">
+						<img src="assets/images/X200logo.png" alt="" class="logo">
+						<p>蔡司三大定焦镜头<br>蓝图自研影像双芯<br>全焦段<strong>4K 60fps 10bit log</strong></p>
+						<img src="assets/images/video.png" id="cover-image">
+						<br>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg>
+						<h1>点击播放视频</h1>
+					</div>
+
+					<div id="fullscreen-video" style="display: none;">
+						<div id="exit-button">×</div>
+						<video id="video-player" autoplay controls>
+							<source src="assets/video.mp4" type="video/mp4">
+							浏览器不支持 video 标签。
+						</video>
+					</div>
+				</div>
+			</section>
+		
+			
+			<section class="section cam-view-2" data-label="section2">
+
+			</section>
+
+			<section class="section cam-view-3" data-label="section3">
+				<div class="design--container1">
+					<div class="design--content1">
+						<h1 style="white-space: pre;"><strong>V单</strong>大作    即刻上手</h1>
+					</div>
+				</div>
+
+				<div class="design--container2">
+					<div class="design--content2">
+						<h1 style="white-space: pre;">全大底   全焦段   全蔡司</h1>
+						<p>蔡司三大定焦大师镜头</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-4" data-label="section4">
+				<div class="view4--container1">
+					<div class="view4--line"></div>
+					<div class="view4--content1">
+						
+						<h1 style="white-space: pre;">85mm蔡司APO超级长焦镜头Ⅱ</h1>
+						<p style="white-space: pre;">蓝图 × 三星 HP9 | 2 亿像素 | 1/1.4" |<br>f/2.27 | 85mm 等效焦距 | CIPA5.0 专业级防抖" |<br>OIS 光学防抖</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-5" data-label="section5">
+				<div class="view5--container1">
+					<div class="view5--line"></div>
+					<div class="view5--content1">
+						<h1 style="white-space: pre;">35mm蔡司人文纪实镜头</h1>
+						<p style="white-space: pre;">蓝图 × 索尼 LYT-818 | 5000 万像素 | 1/1.28" | f/1.69 |<br>35mm 等效焦距 | CIPA5.0 专业级防抖" | OIS 光学防抖</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-6" data-label="section6">
+				<div class="view6--container1">
+					<div class="view6--line"></div>
+					<div class="view6--content1">
+						<h1 style="white-space: pre;">14mm蔡司超广角镜头</h1>
+						<p style="white-space: pre;">蓝图 × 索尼 LYT-818 | 5000 万像素 | 1/1.28" | f/2.0 |<br>14mm 等效焦距 | CIPA5.0 专业级防抖" | OIS 光学防抖</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-7" data-label="section7">
+				<div class="view7--container1">
+					<div class="view7--content1">
+						<h1 style="white-space: pre;">经典<strong>滚花</strong>纹理</h1>
+						
+					</div>
+					<div class="view7--content2">
+						<h1>标志性<strong>银边</strong>点缀</h1>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-8" data-label="section8">
+				<div class="view8--container1">
+					<div class="view8--content1">
+						<h1 style="white-space: pre;" ><strong>经典</strong>影像印记</h1>
+						<h2 ><strong>细节</strong>大有来头</h2>
+					</div>
+				</div>
+				<div class="view8--container2"></div>
+					<div class="view8--content2">
+						<curved-text text="饼干头造型Deco，一如经典相机相机定焦镜头字" radius="600" font-size="20" ></curved-text>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-9" data-label="section9">
+
+			</section>
+
+
+
+		</div>
+	</div>
+
+	<!-- 背景 -->
+	<div id="smooth-wrapper2">
+		<div id="smooth-content2">
+			<div class="background">
+				<div class="view1">
+					<h1>X200</h1>
+				</div>
+
+				<div class="view2">
+					<h1>Ultra</h1>
+				</div>
+
+				<div class="view3">
+					<h1>Camera</h1>
+				</div>
+
+				<div class="view7">
+					<h1>Design</h1>
+				</div>
+				
+				<div class="view8">
+					<h1>Detail</h1>
+				</div>
+			</div>
+		</div>
+	</div> 
+
 	<div id="webgi-canvas-container">
 		<canvas id="webgi-canvas"></canvas>
 	</div>
 
 	<script src="src/index.ts" type="module"></script>
+	<script>
+		class CurvedText extends HTMLElement {
+			connectedCallback() {
+				const text = this.getAttribute("text") || "弧线文字";
+				const radius = parseInt(this.getAttribute("radius") || "150");
+				const fontSize = parseInt(this.getAttribute("font-size") || "16");
+				const id = `arcPath-${Math.random().toString(36).substr(2, 5)}`;
+	
+				this.innerHTML = `
+					<svg width="${radius * 2}" height="${radius + 50}">
+						<path id="${id}" d="M 0 ${radius} A ${radius} ${radius} 0 0 1 ${radius * 2} ${radius}" fill="none" />
+						<text font-size="${fontSize}" fill="#707070">
+							<textPath href="#${id}" startOffset="50%" text-anchor="middle">
+								${text}
+							</textPath>
+						</text>
+					</svg>
+				`;
+			}
+		}
+	
+		customElements.define("curved-text", CurvedText);
+	</script>
 </body>
 
 </html>
