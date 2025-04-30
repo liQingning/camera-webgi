@@ -215,6 +215,7 @@ async function setupViewer(){
         // 退出函数（统一处理）
         function exitFullscreenVideo() {
             videoPlayer.pause();
+            videoPlayer.currentTime = 0;
             videoPlayer.style.opacity = '0';
             setTimeout(() => {
             fullscreenVideo.style.display = 'none';
@@ -477,6 +478,9 @@ async function setupViewer(){
                 const textE3 = document.querySelector('.view8') as HTMLElement
                 if (textE3) {
                     textE3.style.opacity = `${lerp(0,1,p)}`
+                    if(p==1){
+                        textE3.style.opacity='1';
+                    }
                 }
                 const textE4 = document.querySelector('.view8--container1') as HTMLElement
                 if (textE4) {
@@ -485,9 +489,8 @@ async function setupViewer(){
                 }
                 const textE5 = document.querySelector('.view8--content2') as HTMLElement
                 if (textE5) {
-                    textE5.style.opacity = `0`
-                    if(p==1){
-                        textE5.style.opacity = `1`
+                    if(p<=0.9){
+                        textE5.style.opacity='0'
                     }
                     
                 }
@@ -502,16 +505,17 @@ async function setupViewer(){
             end: "top top",
             onUpdate: self => {
                 const p = self.progress;
-                console.log(p);
+                const gray = Math.round(lerp(239, 0, p));
+                document.body.style.backgroundColor = `rgb(${gray}, ${gray}, ${gray})`;//背景变黑
                 position.set(
-                    lerp(0.0,2.82, p),
-                    lerp(-2.39,-0.8,p),
-                    lerp(-1.8,-0.66,p)
+                    lerp(0.0,2.64, p),
+                    lerp(-2.39,-0.9,p),
+                    lerp(-1.8,0.1,p)
                 )
                 target.set(
-                    lerp(0.0,-0.1, p),
-                    lerp(0.677,-0.83,p),
-                    lerp(-0.38,-0.57,p)
+                    lerp(0.0,-1.8, p),
+                    lerp(0.677,-0.9,p),
+                    lerp(-0.38,-0.9,p)
                 )
                 const textE1 = document.querySelector('.view8') as HTMLElement
                 if (textE1) {
@@ -519,13 +523,19 @@ async function setupViewer(){
                 }
                 const textE2 = document.querySelector('.view8--container1') as HTMLElement
                 if (textE2) {
+                    textE2.style.opacity='1'
                     textE2.style.opacity = `${lerp(1,0,p)}`
-                    textE2.style.transform=`translateY(${-p*400+p*window.innerHeight}px)`
                 }
                 const textE3 = document.querySelector('.view8--content2') as HTMLElement
                 if (textE3) {
-                    textE3.style.opacity = `0`
+                    textE3.style.opacity = `${lerp(1,0,p)}`
                 }
+                const textE4 = document.querySelector('.view9--container1') as HTMLElement
+                if (textE4) {
+                    textE4.style.opacity = `${lerp(0,1,p)}`
+                    textE4.style.transform = `translateX(${-p * 400}px) translateY(${(p-1) *  window.innerHeight}px)` 
+                }
+                
                 onUpdate()
             }
         })

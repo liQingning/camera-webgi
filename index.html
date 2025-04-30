@@ -145,7 +145,7 @@
 					</div>
 				</div>
 
-				<div class="view8--container2"></div>
+				<div class="view8--container2">
 					<div class="view8--content2">
 						<curved-text text="饼干头造型Deco，一如经典相机相机定焦镜头字" radius="600" font-size="20" ></curved-text>
 					</div>
@@ -155,13 +155,24 @@
 
 			<section class="section cam-view-9" data-label="section9">
 				<div class="view9--container1">
-					<div class="view9--content1">
-						<h1 style="white-space: pre;" ><strong>经典</strong>影像印记</h1>
-						<h2 ><strong>细节</strong>大有来头</h2>
+					<h1>全新<strong>相机控制键</strong></h1>
+					<h2>是仪式感也是创作灵感</h2>
+					<div id="video-carousel" class="carousel-container">
+						<video src="/assets/video1.webm" class="carousel-video" muted></video>
+						<video src="/assets/video2.webm" class="carousel-video" muted></video>
+						<video src="/assets/video3.webm" class="carousel-video" muted></video>
+					
+						<div class="carousel-controls">
+							<button id="prevBtn">&lt;</button>
+							<button id="nextBtn">	&gt;</button>
+						</div>
 					</div>
+					<p style="white-space: pre;">双击-快启 | 全按-快门 | 轻按-锁焦 | 滑动-曝光 | 滑动-变焦 | 长按-连按</p>
+
 				</div>
 
 			</section>
+
 
 
 
@@ -229,6 +240,42 @@
 	
 		customElements.define("curved-text", CurvedText);
 	</script>
+	<script>
+		const videos = document.querySelectorAll('.carousel-video');
+		const prevBtn = document.getElementById('prevBtn');
+		const nextBtn = document.getElementById('nextBtn');
+	
+		let currentIndex = 0;
+	
+		function showVideo(index) {
+			videos.forEach((v, i) => {
+				v.pause();
+				v.classList.remove('active');
+			});
+			videos[index].classList.add('active');
+			videos[index].currentTime = 0;
+			videos[index].play();
+		}
+	
+		prevBtn.addEventListener('click', () => {
+			currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+			showVideo(currentIndex);
+		});
+	
+		nextBtn.addEventListener('click', () => {
+			currentIndex = (currentIndex + 1) % videos.length;
+			showVideo(currentIndex);
+		});
+	
+		// 初始化第一段视频
+		showVideo(currentIndex);
+		videos.forEach(v => {
+			v.addEventListener('ended', () => {
+				nextBtn.click(); // 自动切换
+			});
+		});
+	</script>
+	
 </body>
 
 </html>
