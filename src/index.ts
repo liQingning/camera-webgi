@@ -535,7 +535,72 @@ async function setupViewer(){
                     textE4.style.opacity = `${lerp(0,1,p)}`
                     textE4.style.transform = `translateX(${-p * 400}px) translateY(${(p-1) *  window.innerHeight}px)` 
                 }
+                const textE5 = document.querySelector('.view9') as HTMLElement
+                if (textE5) {
+                    textE5.style.opacity = `${lerp(0,1,p)}`
+                }
                 
+                onUpdate()
+            }
+        })
+
+        //第九部分到第十部分
+        ScrollTrigger.create({
+            trigger: ".cam-view-10",
+            start: "top bottom",
+            end: "top top",
+            onUpdate: self => {
+                const p = self.progress;
+                const gray = Math.round(lerp(0,239, p));
+                document.body.style.backgroundColor = `rgb(${gray}, ${gray}, ${gray})`;//背景变白
+                position.set(
+                    lerp(2.64,2.39, p),
+                    lerp(-0.9,0.226,p),
+                    lerp(0.1,9,p)
+                )
+                target.set(
+                    lerp(-1.8,-1.5, p),
+                    lerp(-0.9,0.0337,p),
+                    lerp(-0.9,0.45,p)
+                )
+                const textE1 = document.querySelector('.view9') as HTMLElement
+                if (textE1) {
+                    textE1.style.opacity = `${lerp(1,0,p)}`
+                }
+                const textE2 = document.querySelector('.view9--container1') as HTMLElement
+                if (textE2) {
+                    textE2.style.opacity = `${lerp(1,0,p)}`
+                    textE2.style.transform = `translateX(${p * 800-400}px) translateY(${p *  window.innerHeight}px)` 
+                }
+                const textE3 = document.querySelector('.view10') as HTMLElement
+                if (textE3) {
+                    textE3.style.opacity = `${lerp(0,1,p)}`
+                }
+                const textE4 = document.querySelector('.view10--container1') as HTMLElement
+                if (textE4) {
+                    textE4.style.opacity = `${lerp(0,1,p)}`
+                    textE4.style.transform = `translateX(${p * 400}px) translateY(${(p-1) *  window.innerHeight}px)` 
+                }
+                const textE5 = document.querySelector('.view10--container2 h1') as HTMLElement
+                if (textE5) {
+                    textE5.style.opacity = `${lerp(0,1,(p-0.2)*1.25)}`
+                    textE5.style.transform = `translateX(${(p-0.2)*1.25 * 400}px) translateY(${(p-1) *  window.innerHeight}px)` 
+                }
+                const textE6 = document.querySelector('.view10--content1') as HTMLElement
+                if (textE6) {
+                    textE6.style.opacity = `${lerp(0,1,(p-0.4)*1.666)}`
+                    textE6.style.transform = `translateX(${(p-0.4)*1.666 * 800}px) translateY(${(p-1) *  window.innerHeight}px)` 
+                }
+                const textE7 = document.querySelector('.view10--content2') as HTMLElement
+                if (textE7) {
+                    textE7.style.opacity = `${lerp(0,1,(p-0.6)*2.5)}`
+                    textE7.style.transform = `translateX(${(p-0.6)*2.5 * 800}px) translateY(${(p-1) *  window.innerHeight}px)` 
+                }
+                const textE8 = document.querySelector('.view10--content3') as HTMLElement
+                if (textE8) {
+                    textE8.style.opacity = `${lerp(0,1,(p-0.8)*5)}`
+                    textE8.style.transform = `translateX(${(p-0.8)*5 * 800}px) translateY(${(p-1) *  window.innerHeight}px)` 
+                }
                 onUpdate()
             }
         })

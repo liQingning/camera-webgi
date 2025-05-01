@@ -20,7 +20,7 @@ body {
 }
 /* 背景层 */
 #smooth-wrapper2 {
-  height: 900vh;
+  height: 1000vh;
   overflow: hidden;
   width: 100%;
   top: 0;
@@ -686,7 +686,7 @@ svg{
   font-size: 50px;
   background-clip: text;
   background-image: linear-gradient(9deg, #707070, #ffffff);
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0);
 }
 .view9--container1 strong{
   color: #415FFF;
@@ -698,7 +698,7 @@ svg{
   font-size: 50px;
   background-clip: text;
   background-image: linear-gradient(9deg, #707070, #ffffff);
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0);
 
 }
 .carousel-container {
@@ -725,12 +725,12 @@ svg{
 .carousel-controls {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 10%;
   transform: translateX(-50%);
 }
 
 .carousel-controls button {
-  margin: 0 10px;
+  margin: 0 2px;
   padding: 4px ;
   width: 50px;
   height: 50px;
@@ -748,6 +748,111 @@ svg{
   color: #acacac;
 }
 
+.view10--container1{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 10%;
+  left: -150px;
+  z-index: 4;
+}
+.view10--container1 h1{
+  font-family: 'vivoSans-bold';
+  font-size: 60px;
+  top: -50px;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #ff6b01, #ee01ff,#417aff);
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+}
+.view10--container1 img{
+  top: 100px;
+  margin-right: 30px;
+  position: relative;
+}
+.view10-img1{
+  width: 80px;
+}
+.view10-img2{
+  width: 150px;
+}
+.view10-img3{
+  width: 150px;
+}
+.view10--container2{
+  position: absolute;
+  display: flex;
+  width: 1000px;
+  top: 25%;
+  left: -150px;
+  z-index: 4;
+}
+.view10--container2 h1{
+  position: absolute;
+  font-family: 'vivoSans-bold';
+  font-size: 60px;
+  top: -10px;
+}
+.view10--container2 h2{
+  position: absolute;
+  font-family: 'vivoSans-bold';
+  font-size: 40px;
+  left: 0px;
+}
+.view10--container2 p{
+  position: absolute;
+  font-family: 'vivoSans-bold';
+  font-size: 20px;
+  left: 0px;
+}
+.view10--container2 svg{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  stroke-width: 2;
+  stroke: url(#gradient); /* 用 SVG 自己定义的渐变 */
+  fill: none;
+}
+.view10--content1 h2{
+  top: 100px;
+  left: -400px;
+}
+.view10--content1 p{
+  top: 170px;
+  left: -400px;
+  width: 1000px;
+}
+.view10--content1 svg{
+  top: 140px;
+  left: -70px;
+}
+.view10--content2 h2{
+  top: 190px;
+  left: -400px;
+}
+.view10--content2 p{
+  top: 260px;
+  left: -400px;
+  width: 1000px;
+}
+.view10--content2 svg{
+  top: 230px;
+  left: -90px;
+}
+.view10--content3 h2{
+  top: 280px;
+  left: -400px;
+}
+.view10--content3 p{
+  top: 355px;
+  left: -400px;
+  width: 1000px;
+  line-height: 1.3;
+}
+.view10--content3 svg{
+  top: 320px;
+  left: -110px;
+}
 
 
 
@@ -867,6 +972,26 @@ svg{
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
   -webkit-text-stroke: 2px #acacac84; 
+}
+
+.view10{
+  position: absolute;
+  top: 900vh;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -100;
+}
+.view10 h1{
+  justify-content: center;
+  margin-left: -300px;
+  margin-top: 550px;
+  font-family: 'vivoSans-bold';
+  font-size: 600px;
+  color: transparent; /* 字体内部透明 */
+  -webkit-text-stroke: 2px #415eff6d; 
 }
 
 
