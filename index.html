@@ -168,9 +168,7 @@
 						</div>
 					</div>
 					<p style="white-space: pre;">双击-快启 | 全按-快门 | 轻按-锁焦 | 滑动-曝光 | 滑动-变焦 | 长按-连按</p>
-
 				</div>
-
 			</section>
 
 			<section class="section cam-view-10" data-label="section10">
@@ -226,10 +224,27 @@
 
 			</section>
 
+			<section class="section cam-view-11" data-label="section11">
+				<div class="view11--container1">
+					<img src="./assets/images/x200logo2.png" alt="">
+					<h1>大场面，V单掌控</h1>
+					<a href="https://www.vivo.com/vivo/x200ultra/" class="a1" target="_blank">
+						<span class="stretch-text">了解更多</span>
+						<button class="view11-button1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></button>
+					</a>
+					<a href="https://shop.vivo.com.cn/product/10010781" class="a2" target="_blank">
+						<span class="stretch-text">立即购买</span>
+						<button class="view11-button2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></button>
+					</a>
+				</div>
+			</section>
 
+			<!-- 返回顶部按钮 -->
+			<div class="back-to-top" id="backToTop">
+				<div class="lottie-icon" id="lottieContainer">
 
-
-
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -265,6 +280,11 @@
 				<div class="view10">
 					<h1>Camera</h1>
 				</div>
+
+				<div class="view11">
+					<h1>Purchase</h1>
+				</div>
+
 			</div>
 		</div>
 	</div> 
@@ -330,6 +350,36 @@
 			v.addEventListener('ended', () => {
 				nextBtn.click(); // 自动切换
 			});
+		});
+	</script>
+	<script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
+
+
+	<script>
+		// 初始化 Lottie 动画
+		const lottieContainer = document.getElementById('lottieContainer');
+		const animation = lottie.loadAnimation({
+			container: lottieContainer,
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: 'https://lottie.host/adf66ea4-c2d8-402f-a50a-2dc18454fd98/ndEs3yo5iQ.json'
+		});
+	
+		// 滚动出现按钮
+		const backToTop = document.getElementById('backToTop');
+	
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 300) {
+				backToTop.classList.add('show');
+			} else {
+				backToTop.classList.remove('show');
+			}
+		});
+	
+		// 点击滚动回顶部
+		backToTop.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		});
 	</script>
 	
