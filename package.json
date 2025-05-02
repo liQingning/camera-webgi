@@ -33,6 +33,6 @@
   "type": "module",
   "dependencies": {
     "gasp": "^0.0.2",
-    "gsap": "^3.12.7"
+    "gsap": "^3.13.0"
   }
 }
