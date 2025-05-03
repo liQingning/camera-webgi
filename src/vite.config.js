@@ -4,6 +4,11 @@ import path from 'path'
 
 export default defineConfig({
     base: '/vivoX200Ultra-webgi/',
+    server: {
+        headers: {
+          'Content-Type': 'text/javascript'
+        }
+      },
     plugins: [
         viteStaticCopy({
             targets: [
