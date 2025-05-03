@@ -3,6 +3,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 export default defineConfig({
+    base: '/vivoX200Ultra-webgi/',
     plugins: [
         viteStaticCopy({
             targets: [
