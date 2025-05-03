@@ -5,7 +5,7 @@
 	<title>vivo-webgi</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="icon" href="/assets/images/iconlogo.png" type="image/png">
+	<link rel="icon" href="./assets/images/iconlogo.png" type="image/png">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -14,7 +14,7 @@
 <body>
 	<!-- 加载页面 -->
 	<div class="loader">
-		<img src="assets/images/logo蓝.png" width="100px">
+		<img src="./assets/images/logo蓝.png" width="100px">
 		<p>Loading... Please wait</p>
 		<div class="progress"></div>
 	</div>
@@ -26,7 +26,7 @@
 
 			<section class="header">
 				<div class="header--container">
-					<a href="https://www.vivo.com.cn/brand/home" target="_blank"><img class="header--brand" src="assets/images/logo蓝.png"></a>
+					<a href="https://www.vivo.com.cn/brand/home" target="_blank"><img class="header--brand" src="./assets/images/logo蓝.png"></a>
 					<ul class="header--menu">
 						<a href="https://www.vivo.com.cn/vivo/3D/x200ultra" target="_blank"><li>360°展示</li></a>
 						<a href="https://www.vivo.com.cn/vivo/param/x200ultra" target="_blank"><li>参数规格</li></a>
@@ -56,9 +56,9 @@
 		
 				<div class="video--container">
 					<div class="video--content">
-						<img src="assets/images/X200logo.png" alt="" class="logo">
+						<img src="./assets/images/X200logo.png" alt="" class="logo">
 						<p>蔡司三大定焦镜头<br>蓝图自研影像双芯<br>全焦段<strong>4K 60fps 10bit log</strong></p>
-						<img src="assets/images/video.png" id="cover-image">
+						<img src="./assets/images/video.png" id="cover-image">
 						<br>
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg>
 						<h1>点击播放视频</h1>
@@ -67,7 +67,7 @@
 					<div id="fullscreen-video" style="display: none;">
 						<div id="exit-button">×</div>
 						<video id="video-player" autoplay controls>
-							<source src="assets/video.mp4" type="video/mp4">
+							<source src="./assets/video.mp4" type="video/mp4">
 							浏览器不支持 video 标签。
 						</video>
 					</div>
@@ -158,9 +158,9 @@
 					<h1>全新<strong>相机控制键</strong></h1>
 					<h2>是仪式感也是创作灵感</h2>
 					<div id="video-carousel" class="carousel-container">
-						<video src="/assets/video1.webm" class="carousel-video" muted></video>
-						<video src="/assets/video2.webm" class="carousel-video" muted></video>
-						<video src="/assets/video3.webm" class="carousel-video" muted></video>
+						<video src="./assets/video1.webm" class="carousel-video" muted></video>
+						<video src="./assets/video2.webm" class="carousel-video" muted></video>
+						<video src="./assets/video3.webm" class="carousel-video" muted></video>
 					
 						<div class="carousel-controls">
 							<button id="prevBtn">&lt;</button>
@@ -293,7 +293,7 @@
 		<canvas id="webgi-canvas"></canvas>
 	</div>
 
-	<script src="src/index.ts" type="module"></script>
+	<script src="./src/index.ts" type="module"></script>
 	<script>
 		class CurvedText extends HTMLElement {
 			connectedCallback() {
