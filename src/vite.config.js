@@ -10,9 +10,16 @@ export default defineConfig({
         }
       },
       build: {
+        outDir: 'docs',
         rollupOptions: {
           input: {
-            main: resolve(__dirname, 'index.html')
+            main: resolve(__dirname, 'index.html'),
+            app: resolve(__dirname, 'src/main.ts')
+          },
+          output: {
+            entryFileNames: 'src/[name].[hash].js',
+            chunkFileNames: 'src/[name].[hash].js',
+            assetFileNames: 'assets/[name].[hash][extname]'
           }
         }
       },
