@@ -79,7 +79,7 @@ async function setupViewer(){
     viewer.renderer.refreshPipeline()
 
     //加载模型
-    const assets = await manager.addFromPath("/assets/scene (10).glb");
+    const assets = await manager.addFromPath("/assets/scene (24).glb");
 
 
     //禁用用户控制
