@@ -4,9 +4,23 @@ import path from 'path'
 
 export default defineConfig({
     base: '/vivoX200Ultra-webgi/',
-    server: {
+    resolve: {
+        alias: {
+          '@': resolve(__dirname, 'src')
+        }
+      },
+      build: {
+        rollupOptions: {
+          input: {
+            main: resolve(__dirname, 'index.html')
+          }
+        }
+      },
+      server: {
+        port: 3000,
+        strictPort: true,
         headers: {
-          'Content-Type': 'text/javascript'
+          'Content-Type': 'text/javascript' // 强制TS文件MIME类型
         }
       },
     plugins: [

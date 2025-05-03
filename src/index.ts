@@ -755,6 +755,4 @@ async function setupViewer(){
 
 
 }
-
-
 setupViewer()
