@@ -17,11 +17,13 @@ import {
     IViewerPlugin, FileTransferPlugin,
 } from "webgi"
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother"
+console.log(gsap)
 
 import "./styles.css"
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger,ScrollSmoother)
 
 let needsUpdate = true;
 async function setupViewer(){
