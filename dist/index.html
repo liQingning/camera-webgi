@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<title>vivo-webgi</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" href="/assets/iconlogo-2e3f4f99.png" type="image/png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-b27e891c.js"></script>
+  <link rel="stylesheet" href="/assets/index-af3124e9.css">
+</head>
+
+<body>
+	
+	<!-- 加载页面 -->
+	<div class="loader">
+		<img src="/assets/logo蓝-75e581e7.png" width="100px">
+		<p>Loading... Please wait</p>
+		<div class="progress"></div>
+	</div>
+
+
+
+	<div id="smooth-wrapper">
+		<div id="smooth-content">
+
+			<section class="header">
+				<div class="header--container">
+					<a href="https://www.vivo.com.cn/brand/home" target="_blank"><img class="header--brand" src="/assets/logo蓝-75e581e7.png"></a>
+					<ul class="header--menu">
+						<a href="https://www.vivo.com.cn/vivo/3D/x200ultra" target="_blank"><li>360°展示</li></a>
+						<a href="https://www.vivo.com.cn/vivo/param/x200ultra" target="_blank"><li>参数规格</li></a>
+						<a href="https://shop.vivo.com.cn/product/10010781" target="_blank"><li>购 买</li></a>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section cam-view-1" data-label="section1">
+				
+				<div class="hero--container">
+					<div class="hero--content">
+						<h2>大场面</h2>
+						<h1>V</h1>
+						<p>单掌控</p>
+						<button tabindex="-1" class="button button-know-more">了解 更多</button>
+					</div>
+				</div>
+		
+		
+				<div class="hero--scroller--container">
+					<div class="hero--scroller">
+						<p class="hero--scroller--text">向下滑动继续探索</p>
+						<svg class="bounce" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 33a15 15 0 1 0 0-30 15 15 0 0 0 0 30Z" stroke="#929292" stroke-linecap="round" stroke-linejoin="round"/><path d="m12 18 6 6 6-6M18 12v12" stroke="#929292" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+				</div>
+		
+				<div class="video--container">
+					<div class="video--content">
+						<img src="/assets/X200logo-34a2e997.png" alt="" class="logo">
+						<p>蔡司三大定焦镜头<br>蓝图自研影像双芯<br>全焦段<strong>4K 60fps 10bit log</strong></p>
+						<img src="/assets/video-cdc29f4c.png" id="cover-image">
+						<br>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg>
+						<h1>点击播放视频</h1>
+					</div>
+
+					<div id="fullscreen-video" style="display: none;">
+						<div id="exit-button">×</div>
+						<video id="video-player" autoplay controls>
+							<source src="/assets/video-4ca116c0.mp4" type="video/mp4">
+							浏览器不支持 video 标签。
+						</video>
+					</div>
+				</div>
+			</section>
+		
+			
+			<section class="section cam-view-2" data-label="section2">
+
+			</section>
+
+			<section class="section cam-view-3" data-label="section3">
+				<div class="design--container1">
+					<div class="design--content1">
+						<h1 style="white-space: pre;"><strong>V单</strong>大作    即刻上手</h1>
+					</div>
+				</div>
+
+				<div class="design--container2">
+					<div class="design--content2">
+						<h1 style="white-space: pre;">全大底   全焦段   全蔡司</h1>
+						<p>蔡司三大定焦大师镜头</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-4" data-label="section4">
+				<div class="view4--container1">
+					<div class="view4--line"></div>
+					<div class="view4--content1">
+						
+						<h1 style="white-space: pre;">85mm蔡司APO超级长焦镜头Ⅱ</h1>
+						<p style="white-space: pre;">蓝图 × 三星 HP9 | 2 亿像素 | 1/1.4" |<br>f/2.27 | 85mm 等效焦距 | CIPA5.0 专业级防抖" |<br>OIS 光学防抖</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-5" data-label="section5">
+				<div class="view5--container1">
+					<div class="view5--line"></div>
+					<div class="view5--content1">
+						<h1 style="white-space: pre;">35mm蔡司人文纪实镜头</h1>
+						<p style="white-space: pre;">蓝图 × 索尼 LYT-818 | 5000 万像素 | 1/1.28" | f/1.69 |<br>35mm 等效焦距 | CIPA5.0 专业级防抖" | OIS 光学防抖</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-6" data-label="section6">
+				<div class="view6--container1">
+					<div class="view6--line"></div>
+					<div class="view6--content1">
+						<h1 style="white-space: pre;">14mm蔡司超广角镜头</h1>
+						<p style="white-space: pre;">蓝图 × 索尼 LYT-818 | 5000 万像素 | 1/1.28" | f/2.0 |<br>14mm 等效焦距 | CIPA5.0 专业级防抖" | OIS 光学防抖</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-7" data-label="section7">
+				<div class="view7--container1">
+					<div class="view7--content1">
+						<h1 style="white-space: pre;">经典<strong>滚花</strong>纹理</h1>
+						
+					</div>
+					<div class="view7--content2">
+						<h1>标志性<strong>银边</strong>点缀</h1>
+					</div>
+				</div>
+			</section>
+
+			<section class="section cam-view-8" data-label="section8">
+				<div class="view8--container1">
+					<div class="view8--content1">
+						<h1 style="white-space: pre;" ><strong>经典</strong>影像印记</h1>
+						<h2 ><strong>细节</strong>大有来头</h2>
+					</div>
+				</div>
+
+				<div class="view8--container2">
+					<div class="view8--content2">
+						<curved-text text="饼干头造型Deco，一如经典相机相机定焦镜头字" radius="600" font-size="20" ></curved-text>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="section cam-view-9" data-label="section9">
+				<div class="view9--container1">
+					<h1>全新<strong>相机控制键</strong></h1>
+					<h2>是仪式感也是创作灵感</h2>
+					<div id="video-carousel" class="carousel-container">
+						<video src="/assets/video1-5c59695c.webm" class="carousel-video" muted></video>
+						<video src="/assets/video2-ffd0eeae.webm" class="carousel-video" muted></video>
+						<video src="/assets/video3-bfaaf3df.webm" class="carousel-video" muted></video>
+					
+						<div class="carousel-controls">
+							<button id="prevBtn">&lt;</button>
+							<button id="nextBtn">	&gt;</button>
+						</div>
+					</div>
+					<p style="white-space: pre;">双击-快启 | 全按-快门 | 轻按-锁焦 | 滑动-曝光 | 滑动-变焦 | 长按-连按</p>
+				</div>
+			</section>
+
+			<section class="section cam-view-10" data-label="section10">
+				<div class="view10--container1">
+					<h1 style="white-space: pre;">2K  蔡司大师彩色屏</h1>
+					<div>
+						<img src="/assets/Dobly-f858f57c.png" alt="" class="view10-img1">
+						<img src="/assets/HDR10-Plus-f5adf77f.png" alt="" class="view10-img2">
+						<img src="/assets/hdr-vivid-bca6b77e.png" alt="" class="view10-img3">
+					</div>
+				</div>
+				<div class="view10--container2">
+					<h1>全场景护眼技术<sup>3</sup></h1>
+					<div class="view10--content1">
+						<h2>圆偏振光护眼技术</h2>
+						<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+							<defs>
+								<linearGradient id="gradient" x1="0" x2="1" y1="0" y2="0">
+									<stop offset="0%" stop-color="#2F8CD3"/>
+									<stop offset="100%" stop-color="#14A783"/>
+								</linearGradient>
+							</defs>
+					</svg>
+						<p>类自然光显示，为眼睛带来柔光和舒适的观感体验。</p>
+					</div>
+					<div class="view10--content2">
+						<h2>全亮度PWM调光</h2>
+						<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brightness"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 3l0 18" /><path d="M12 9l4.65 -4.65" /><path d="M12 14.3l7.37 -7.37" /><path d="M12 19.6l8.85 -8.85" />
+							<defs>
+								<linearGradient id="gradient" x1="0" x2="1" y1="0" y2="0">
+									<stop offset="0%" stop-color="#2F8CD3"/>
+									<stop offset="100%" stop-color="#14A783"/>
+								</linearGradient>
+							</defs>
+						</svg>
+						<p>全亮度，全天候清晰，准确，稳定的显示效果。</p>
+					</div>
+					<div class="view10--content3">
+						<h2>四大类护眼科技</h2>
+
+						<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-seedling"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 3a7 7 0 0 1 6.95 6.155a6.97 6.97 0 0 1 5.05 -2.155h3a1 1 0 0 1 1 1v1a7 7 0 0 1 -7 7h-2v4a1 1 0 0 1 -2 0v-7h-2a7 7 0 0 1 -7 -7v-2a1 1 0 0 1 1 -1z" />
+							<defs>
+								<linearGradient id="gradient" x1="0" x2="1" y1="0" y2="0">
+									<stop offset="0%" stop-color="#2F8CD3"/>
+									<stop offset="100%" stop-color="#14A783"/>
+								</linearGradient>
+							</defs>
+						</svg>
+						<p>智能化，场景化，个性化，类自然的调节显示方案，<br>长时间用眼也舒适。</p>
+					</div>
+					
+				</div>
+
+			</section>
+
+			<section class="section cam-view-11" data-label="section11">
+				<div class="view11--container1">
+					<img src="/assets/x200logo2-9180e39c.png" alt="">
+					<h1>大场面，V单掌控</h1>
+					<a href="https://www.vivo.com/vivo/x200ultra/" class="a1" target="_blank">
+						<span class="stretch-text">了解更多</span>
+						<button class="view11-button1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></button>
+					</a>
+					<a href="https://shop.vivo.com.cn/product/10010781" class="a2" target="_blank">
+						<span class="stretch-text">立即购买</span>
+						<button class="view11-button2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></button>
+					</a>
+				</div>
+			</section>
+
+			<!-- 返回顶部按钮 -->
+			<div class="back-to-top" id="backToTop">
+				<div class="lottie-icon" id="lottieContainer">
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 背景 -->
+	<div id="smooth-wrapper2">
+		<div id="smooth-content2">
+			<div class="background">
+				<div class="view1">
+					<h1>X200</h1>
+				</div>
+
+				<div class="view2">
+					<h1>Ultra</h1>
+				</div>
+
+				<div class="view3">
+					<h1>Camera</h1>
+				</div>
+
+				<div class="view7">
+					<h1>Design</h1>
+				</div>
+				
+				<div class="view8">
+					<h1>Detail</h1>
+				</div>
+
+				<div class="view9">
+					<h1>Control</h1>
+				</div>
+
+				<div class="view10">
+					<h1>Camera</h1>
+				</div>
+
+				<div class="view11">
+					<h1>Purchase</h1>
+				</div>
+
+			</div>
+		</div>
+	</div> 
+
+	<div id="webgi-canvas-container">
+		<canvas id="webgi-canvas"></canvas>
+	</div>
+
+
+	<script>
+		class CurvedText extends HTMLElement {
+			connectedCallback() {
+				const text = this.getAttribute("text") || "弧线文字";
+				const radius = parseInt(this.getAttribute("radius") || "150");
+				const fontSize = parseInt(this.getAttribute("font-size") || "16");
+				const id = `arcPath-${Math.random().toString(36).substr(2, 5)}`;
+	
+				this.innerHTML = `
+					<svg width="${radius * 2}" height="${radius + 50}">
+						<path id="${id}" d="M 0 ${radius} A ${radius} ${radius} 0 0 1 ${radius * 2} ${radius}" fill="none" />
+						<text font-size="${fontSize}" fill="#707070">
+							<textPath href="#${id}" startOffset="50%" text-anchor="middle">
+								${text}
+							</textPath>
+						</text>
+					</svg>
+				`;
+			}
+		}
+	
+		customElements.define("curved-text", CurvedText);
+	</script>
+	<script>
+		const videos = document.querySelectorAll('.carousel-video');
+		const prevBtn = document.getElementById('prevBtn');
+		const nextBtn = document.getElementById('nextBtn');
+	
+		let currentIndex = 0;
+	
+		function showVideo(index) {
+			videos.forEach((v, i) => {
+				v.pause();
+				v.classList.remove('active');
+			});
+			videos[index].classList.add('active');
+			videos[index].currentTime = 0;
+			videos[index].play();
+		}
+	
+		prevBtn.addEventListener('click', () => {
+			currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+			showVideo(currentIndex);
+		});
+	
+		nextBtn.addEventListener('click', () => {
+			currentIndex = (currentIndex + 1) % videos.length;
+			showVideo(currentIndex);
+		});
+	
+		// 初始化第一段视频
+		showVideo(currentIndex);
+		videos.forEach(v => {
+			v.addEventListener('ended', () => {
+				nextBtn.click(); // 自动切换
+			});
+		});
+	</script>
+	<script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
+
+
+	<script>
+		// 初始化 Lottie 动画
+		const lottieContainer = document.getElementById('lottieContainer');
+		const animation = lottie.loadAnimation({
+			container: lottieContainer,
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: 'https://lottie.host/adf66ea4-c2d8-402f-a50a-2dc18454fd98/ndEs3yo5iQ.json'
+		});
+	
+		// 滚动出现按钮
+		const backToTop = document.getElementById('backToTop');
+	
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 300) {
+				backToTop.classList.add('show');
+			} else {
+				backToTop.classList.remove('show');
+			}
+		});
+	
+		// 点击滚动回顶部
+		backToTop.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	</script>
+	
+</body>
+
+</html>
