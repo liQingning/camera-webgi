@@ -2,8 +2,10 @@
 
   "$schema": "tsconfig.json",   // [!code ++]
   "compilerOptions": {
+    "isolatedModules":true,
     "strict": true,
-    "module": "commonjs",
+    "target": "es6",
+    "module": "es6", 
     "jsx": "preserve",
     "esModuleInterop": true,
     "sourceMap": true,
@@ -12,8 +14,8 @@
       "es6",
       "dom"
     ],
-    "rootDir": "src",
-    "outDir": "dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "moduleResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"]
