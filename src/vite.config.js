@@ -1,43 +1,45 @@
-import {defineConfig, normalizePath} from 'vite'
+import { defineConfig } from 'vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 export default defineConfig({
-    base: '/vivoX200Ultra-webgi/',
-    resolve: {
-        alias: {
-          '@': resolve(__dirname, 'src')
-        }
+  base: '/vivoX200Ultra-webgi/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src') // 修正1: 使用 path.resolve
+    }
+  },
+  build: {
+    outDir: 'docs',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        app: path.resolve(__dirname, 'src/index.ts') // 修正2: 修正拼写错误 intex.ts → index.ts
       },
-      build: {
-        outDir: 'docs',
-        rollupOptions: {
-          input: {
-            main: resolve(__dirname, 'index.html'),
-            app: resolve(__dirname, 'src/intex.ts')
-          },
-          output: {
-            entryFileNames: 'src/[name].[hash].js',
-            chunkFileNames: 'src/[name].[hash].js',
-            assetFileNames: 'assets/[name].[hash][extname]'
-          }
+      output: {
+        // 修正3: 输出到 assets 目录而非 src
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash][extname]'
+      }
+    }
+  },
+  server: {
+    port: 3000,
+    strictPort: true,
+    headers: {
+      'Content-Type': 'text/javascript'
+    }
+  },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          // 修正4: 使用正确的 glob 语法
+          src: path.resolve(__dirname, 'assets/**/*').replace(/\\/g, '/'),
+          dest: 'assets/'
         }
-      },
-      server: {
-        port: 3000,
-        strictPort: true,
-        headers: {
-          'Content-Type': 'text/javascript' // 强制TS文件MIME类型
-        }
-      },
-    plugins: [
-        viteStaticCopy({
-            targets: [
-                {
-                    src: normalizePath(path.resolve(__dirname, './assets') + '/[!.]*'), // 1️⃣
-                    dest: normalizePath('./assets'), // 2️⃣
-                },
-            ],
-        }),
-    ]
+      ]
+    })
+  ]
 })
