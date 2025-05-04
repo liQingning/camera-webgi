@@ -1,5 +1,5 @@
 {
-  "name": "webgi-vanilla-typescript",
+  "name": "vivo-webgi",
   "version": "1.0.0",
   "description": "WebGi + TypeScript example starter project",
   "main": "index.html",
