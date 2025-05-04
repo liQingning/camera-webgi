@@ -1,4 +1,6 @@
 {
+
+  "$schema": "tsconfig.json",   // [!code ++]
   "compilerOptions": {
     "strict": true,
     "module": "commonjs",
