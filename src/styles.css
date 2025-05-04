@@ -1,3 +1,17 @@
+/* @font-face {
+  font-family: 'vivoSans-bold';
+  src: url('./assets/fonts/vivoSansGlobal-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'vivoSans-light';
+  src: url('./assets/fonts/vivoSansGlobal-Light.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'vivoSans-regular';
+  src: url('./assets/fonts/vivoSansGlobal-Regular.ttf') format('truetype');
+} */
+
 body {
   overflow: hidden;
   scroll-behavior: smooth;
@@ -40,19 +54,6 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'vivoSans-bold';
-  src: url('./assets/fonts/vivoSansGlobal-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'vivoSans-light';
-  src: url('./assets/fonts/vivoSansGlobal-Light.ttf') format('truetype');
-
-}
-@font-face {
-  font-family: 'vivoSans-regular';
-  src: url('./assets/fonts/vivoSansGlobal-Regular.ttf') format('truetype');
-}
 
 /* 加载界面 */
 .loader {
@@ -170,7 +171,7 @@ a {
 
 .hero--content h1{
   position: absolute;
-  top: -320px;
+  top: -360px;
   width: 280px;
   height: 76px;
   font-family: 'vivoSans-bold';
@@ -183,7 +184,7 @@ a {
 
 .hero--content > h2{
   position: absolute;
-  top: -50px;
+  top: -30px;
   left: 200px;
   text-align: right;
   margin-right: 5px;
@@ -198,14 +199,14 @@ a {
   font-size: 120px;
   line-height: 22px;
   letter-spacing: -0.04em;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .button{
   width: 194px;
   height: 60px;
   left: 134px;
-  top: 600px;
+  top: 700px;
   border: none;
   background-image: linear-gradient(9deg, #415FFF, #0087CD);
   border-radius: 58px;
@@ -641,7 +642,7 @@ a {
 }
 .view8--content1 h1,h2{
   font-family: 'vivoSans-bold';
-  margin-bottom: -100px;
+  margin-bottom: -70px;
   font-size: 70px;
 }
 
