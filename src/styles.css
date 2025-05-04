@@ -988,8 +988,8 @@ svg{
   overflow: hidden;
 }
 .view1 h1{
-  margin-left: -200px;
-  margin-top: 800px;
+  margin-left: -150px;
+  margin-top: 450px;
   font-family: 'vivoSans-bold';
   font-size: 800px;
   color: transparent; /* 字体内部透明 */
@@ -1008,7 +1008,7 @@ svg{
 }
 .view2 h1{
   margin-left: -150px;
-  margin-top: 800px;
+  margin-top: 450px;
   font-family: 'vivoSans-bold';
   font-size: 800px;
   color: transparent; /* 字体内部透明 */
@@ -1026,7 +1026,7 @@ svg{
 }
 .view3 h1{
   margin-left: -300px;
-  margin-top: 500px;
+  margin-top: 200px;
   font-family: 'vivoSans-bold';
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
@@ -1045,7 +1045,7 @@ svg{
 }
 .view7 h1{
   margin-left: -200px;
-  margin-top: 500px;
+  margin-top: 200px;
   font-family: 'vivoSans-bold';
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
@@ -1063,8 +1063,8 @@ svg{
   z-index: -100;
 }
 .view8 h1{
-  margin-left: -40px;
-  margin-top: 550px;
+  margin-left: -50px;
+  margin-top: 350px;
   font-family: 'vivoSans-bold';
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
@@ -1084,7 +1084,7 @@ svg{
 .view9 h1{
   justify-content: center;
   margin-left: -300px;
-  margin-top: 550px;
+  margin-top: 350px;
   font-family: 'vivoSans-bold';
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
@@ -1104,7 +1104,7 @@ svg{
 .view10 h1{
   justify-content: center;
   margin-left: -300px;
-  margin-top: 550px;
+  margin-top: 350px;
   font-family: 'vivoSans-bold';
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
@@ -1124,7 +1124,7 @@ svg{
 .view11 h1{
   justify-content: center;
   margin-left: -300px;
-  margin-top: 550px;
+  margin-top: 350px;
   font-family: 'vivoSans-bold';
   font-size: 600px;
   color: transparent; /* 字体内部透明 */
