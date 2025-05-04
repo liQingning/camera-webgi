@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/vivoX200Ultra-webgi/',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src') // 修正1: 使用 path.resolve
+      '@': path.resolve(__dirname, 'src') 
     }
   },
   build: {
@@ -14,22 +14,19 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        app: path.resolve(__dirname, 'src/main.ts') // 修正2: 修正拼写错误 intex.ts → index.ts
+        app: path.resolve(__dirname, 'src/main.ts') 
       },
       output: {
         // 修正3: 输出到 assets 目录而非 src
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].html'
+        assetFileNames: 'assets/[name].[hash][extname]'
       }
     }
   },
   server: {
     port: 3000,
     strictPort: true,
-    headers: {
-      'Content-Type': 'text/javascript'
-    }
   },
   plugins: [
     viteStaticCopy({
