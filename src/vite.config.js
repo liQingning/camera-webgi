@@ -14,7 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        app: path.resolve(__dirname, 'src/index.ts') // 修正2: 修正拼写错误 intex.ts → index.ts
+        app: path.resolve(__dirname, 'src/main.ts') // 修正2: 修正拼写错误 intex.ts → index.ts
       },
       output: {
         // 修正3: 输出到 assets 目录而非 src
