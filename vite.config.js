@@ -20,7 +20,7 @@ export default defineConfig({
         // 修正3: 输出到 assets 目录而非 src
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash][extname]'
+        assetFileNames: 'assets/[name].[hash].html'
       }
     }
   },
