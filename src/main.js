@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { ViewerApp, AssetManagerPlugin, timeout, mobileAndTabletCheck, createStyles, addBasePlugins, CanvasSnipperPlugin, FileTransferPlugin, } from "webgi";
+// import { ViewerApp, AssetManagerPlugin, timeout, mobileAndTabletCheck, createStyles, addBasePlugins, CanvasSnipperPlugin, FileTransferPlugin, } from "webgi";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
