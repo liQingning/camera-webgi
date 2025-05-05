@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { ViewerApp, AssetManagerPlugin, timeout, mobileAndTabletCheck, createStyles, addBasePlugins, CanvasSnipperPlugin, FileTransferPlugin, } from  "https://dist.pixotronics.com/webgi/runtime/bundle-0.11.0.mjs";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import gsap from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js";
+import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js";
+import { ScrollSmoother } from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js";
 console.log(gsap);
 import "./styles.css";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
