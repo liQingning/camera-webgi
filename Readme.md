@@ -1,8 +1,8 @@
 # WebGi vivox200ultra 产品页面
 借鉴了项目: [camera-webgi](https://github.com/ektogamat/camera-webgi),使用 Gsap、ScrollTrigger 和 webgi 引擎构建可滚动页面。
 
-
-<img src="assets/images/屏幕截图.jpg" width="100%" />
+### 实时链接: [https://www.vivo-x200ultra.asia](https://www.vivo-x200ultra.asia/)
+<img src="assets/images/屏幕截图.png" width="100%" />
 
 ## Running
 First install the dependencies:
