@@ -7,7 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { ViewerApp, AssetManagerPlugin, timeout, mobileAndTabletCheck, createStyles, addBasePlugins, CanvasSnipperPlugin, FileTransferPlugin, } from  "https://dist.pixotronics.com/webgi/runtime/bundle-0.11.0.mjs";
+import { ViewerApp, AssetManagerPlugin, timeout, mobileAndTabletCheck, createStyles, addBasePlugins, CanvasSnipperPlugin, FileTransferPlugin,} from  "https://dist.pixotronics.com/webgi/runtime/bundle-0.11.0.mjs";
+// import { EXRExporter } from 'three/addons/exporters/EXRExporter.js';
 // import gsap from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js";
 // import  ScrollTrigger  from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js";
 // import  ScrollSmoother  from "https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js";
@@ -62,7 +63,22 @@ function setupViewer() {
         viewer.renderer.refreshPipeline();
         //加载模型
         const assets = yield manager.addFromPath("./assets/vivo.glb");
-        viewer.renderer.setClearColorHex(0x000000, 0);
+        //加载背景
+        viewer.setEnvironmentMap('./assets/env_gem_002_b6zohk (1).exr');
+         
+        // const exrLoader = new THREE.EXRLoader();
+
+        // exrLoader.load('./assets/env_gem_002_b6zohk (1).exr', function(texture) {
+        //     texture.mapping = THREE.EquirectangularReflectionMapping;
+
+        //     viewer.scene.setEnvironmentMap(texture);
+
+        //     viewer.getPlugin("TonemapPlugin").then((tonemap) => {
+        //         tonemap.background = false;
+        //         viewer.renderer.setClearAlpha(0); // 设置透明背景
+        //     });
+        // });
+
         //禁用用户控制
         if (camera.controls)
             camera.controls.enabled = false;

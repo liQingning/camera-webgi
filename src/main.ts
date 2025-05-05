@@ -12,6 +12,7 @@ import {
     FrameFadePlugin,DiamondPlugin,
     BloomPlugin, TemporalAAPlugin, RandomizedDirectionalLightPlugin, AssetImporter, createStyles,
     addBasePlugins,PickingPlugin,
+    EXRLoadPlugin,
     ITexture, TweakpaneUiPlugin, AssetManagerBasicPopupPlugin, CanvasSnipperPlugin,
 
     IViewerPlugin, FileTransferPlugin,
