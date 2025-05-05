@@ -2,7 +2,13 @@
 借鉴了项目: [camera-webgi](https://github.com/ektogamat/camera-webgi),使用 Gsap、ScrollTrigger 和 webgi 引擎构建可滚动页面。
 
 ### 实时链接: [https://www.vivo-x200ultra.asia](https://www.vivo-x200ultra.asia/)
-<img src="assets/images/屏幕截图.png" width="100%" />
+<img src="assets/images/网页截图.png" width="100%" />
+
+通过webgi渲染模型以允许具有良好性能和易用性的效果渲染。通过Gsap库中的ScrollTrigger和ScrollSmoother让页面根据滚动来展现模型细节和信息。
+<br>
+<strong>by liQingning</strong>
+
+<hr>
 
 ## Running
 First install the dependencies:
