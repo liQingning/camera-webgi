@@ -7,20 +7,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import {
-    ViewerApp,
-    AssetManagerPlugin,
-    timeout,
-    mobileAndTabletCheck,
-    addBasePlugins,
-    FileTransferPlugin,
-    CanvasSnipperPlugin,
-} from "https://unpkg.com/webgi@7.7.0/build/webgi.module.js"; // 你可以根据版本调整 7.7.0
-
-import gsap from "https://cdn.jsdelivr.net/npm/gsap@3.12.2/index.js";
-import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.2/ScrollTrigger.js";
-import { ScrollSmoother } from "https://cdn.jsdelivr.net/npm/gsap@3.12.2/ScrollSmoother.js";
-
+import { ViewerApp, AssetManagerPlugin, timeout, mobileAndTabletCheck, createStyles, addBasePlugins, CanvasSnipperPlugin, FileTransferPlugin, } from "webgi";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+console.log(gsap);
 import "./styles.css";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 let needsUpdate = true;
@@ -65,7 +56,7 @@ function setupViewer() {
         });
         //加载完成后出发动画
         console.log("准备加载资源...");
-        // yield viewer.load("scene.webgi.json");
+        yield viewer.load("scene.webgi.json");
         console.log("加载成功，开始动画");
         introAnimation();
         viewer.renderer.refreshPipeline();
