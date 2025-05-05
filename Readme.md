@@ -1,7 +1,8 @@
-# WebGi starter project
-A template for a vanilla(no ui-framework) project with webgi engine in typescript using parcel bundler.
+# WebGi vivox200ultra 产品页面
+借鉴了项目: [camera-webgi](https://github.com/ektogamat/camera-webgi),使用 Gsap、ScrollTrigger 和 webgi 引擎构建可滚动页面。
 
-About webgi: [https://webgi.xyz/](https://webgi.xyz/)
+
+<img src="assets/images/屏幕截图.jpg" width="100%" />
 
 ## Running
 First install the dependencies:
