@@ -62,6 +62,7 @@ function setupViewer() {
         viewer.renderer.refreshPipeline();
         //加载模型
         const assets = yield manager.addFromPath("./assets/vivo.glb");
+        viewer.renderer.setClearColorHex(0x000000, 0);
         //禁用用户控制
         if (camera.controls)
             camera.controls.enabled = false;
