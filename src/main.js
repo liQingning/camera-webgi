@@ -56,7 +56,7 @@ function setupViewer() {
         });
         //加载完成后出发动画
         console.log("准备加载资源...");
-        yield viewer.load("scene.webgi.json");
+
         console.log("加载成功，开始动画");
         introAnimation();
         viewer.renderer.refreshPipeline();
