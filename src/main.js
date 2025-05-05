@@ -12,7 +12,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 console.log(gsap);
-// import "./styles.css";
+import "./styles.css";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 let needsUpdate = true;
 function setupViewer() {
@@ -55,9 +55,10 @@ function setupViewer() {
             (_a = document.querySelector('.progress')) === null || _a === void 0 ? void 0 : _a.setAttribute('style', `transform: scaleX(${progressRatio})`);
         });
         //加载完成后出发动画
-        importer.addEventListener("onLoad", (ev) => {
-            introAnimation();
-        });
+        console.log("准备加载资源...");
+        // yield viewer.load("scene.webgi.json");
+        console.log("加载成功，开始动画");
+        introAnimation();
         viewer.renderer.refreshPipeline();
         //加载模型
         const assets = yield manager.addFromPath("/assets/scene (24).glb");

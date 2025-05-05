@@ -71,11 +71,11 @@ async function setupViewer(){
         const progressRatio = (ev.loaded / ev.total)
         document.querySelector('.progress')?.setAttribute('style',`transform: scaleX(${progressRatio})`)
     })
-
     //加载完成后出发动画
-    importer.addEventListener("onLoad", (ev) => {
-        introAnimation()
-    })
+    console.log("准备加载资源...");
+    await viewer.load("scene.webgi.json");
+    console.log("加载成功，开始动画");
+    introAnimation(); 
     viewer.renderer.refreshPipeline()
 
     //加载模型
