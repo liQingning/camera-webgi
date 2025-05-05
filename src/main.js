@@ -61,7 +61,7 @@ function setupViewer() {
         introAnimation();
         viewer.renderer.refreshPipeline();
         //加载模型
-        const assets = yield manager.addFromPath("/assets/scene (24).glb");
+        const assets = yield manager.addFromPath("/assets/vivo.glb");
         //禁用用户控制
         if (camera.controls)
             camera.controls.enabled = false;
