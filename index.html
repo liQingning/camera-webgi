@@ -299,6 +299,7 @@
 	<div id="webgi-canvas-container">
 		<canvas id="webgi-canvas"></canvas>
 	</div>
+	<!-- cdn形式引入依赖 -->
 	<script src="https://dist.pixotronics.com/webgi/runtime/bundle-0.11.0.js"> </script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/loaders/EXRLoader.js"></script>
@@ -310,6 +311,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 
   <script type="module" crossorigin src="/src/main.js"></script>
+	<!-- 用svg实现弧形文字 -->
 	<script>
 		class CurvedText extends HTMLElement {
 			connectedCallback() {
@@ -333,6 +335,8 @@
 	
 		customElements.define("curved-text", CurvedText);
 	</script>
+
+	<!-- 视频轮播 -->
 	<script>
 		const videos = document.querySelectorAll('.carousel-video');
 		const prevBtn = document.getElementById('prevBtn');
@@ -370,7 +374,7 @@
 	</script>
 	<script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
 
-
+	<!-- backtotop按钮 -->
 	<script>
 		// 初始化 Lottie 动画
 		const lottieContainer = document.getElementById('lottieContainer');

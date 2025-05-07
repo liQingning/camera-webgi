@@ -66,18 +66,6 @@ function setupViewer() {
         //加载背景
         viewer.setEnvironmentMap('./assets/env_gem_002_b6zohk (1).exr');
          
-        // const exrLoader = new THREE.EXRLoader();
-
-        // exrLoader.load('./assets/env_gem_002_b6zohk (1).exr', function(texture) {
-        //     texture.mapping = THREE.EquirectangularReflectionMapping;
-
-        //     viewer.scene.setEnvironmentMap(texture);
-
-        //     viewer.getPlugin("TonemapPlugin").then((tonemap) => {
-        //         tonemap.background = false;
-        //         viewer.renderer.setClearAlpha(0); // 设置透明背景
-        //     });
-        // });
 
         //禁用用户控制
         if (camera.controls)
@@ -156,12 +144,10 @@ function setupViewer() {
                     const textE4 = document.querySelector('.view1');
                     if (textE4) {
                         textE4.style.opacity = `${lerp(1, 0, p)}`;
-                        // textE4.style.transform = `translateY(${-p *  window.innerHeight}px)` 
                     }
                     const textE5 = document.querySelector('.view2');
                     if (textE5) {
                         textE5.style.opacity = `${lerp(0, 1, p)}`;
-                        // textE5.style.transform = `translateY(${-p *  window.innerHeight}px)` 
                     }
                     onUpdate();
                 }
