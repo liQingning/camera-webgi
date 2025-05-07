@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'vivoSans-bold';
-  src: url('./assets/fonts/vivoSansGlobal-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'vivoSans-light';
-  src: url('./assets/fonts/vivoSansGlobal-Light.ttf') format('truetype');
-
-}
-@font-face {
-  font-family: 'vivoSans-regular';
-  src: url('./assets/fonts/vivoSansGlobal-Regular.ttf') format('truetype');
-}
-
 body {
   overflow: hidden;
   scroll-behavior: smooth;
